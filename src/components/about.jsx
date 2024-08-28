@@ -35,44 +35,45 @@ const locations = [
 const users = [
   {
     name: 'Gabrielle Fernandez',
-    image:{priyanshi},
+    image:priyanshi,
     position: 'Marketing Lead',
   },
   {
     name: 'Victória Silva',
-    image:{Aman},
+    image:Aman,
     position: 'Back-end developer',
   },
   {
     name: 'Gabrielle Fernandez',
-    image:{Toshak},
+    image:Toshak,
     position: 'Sales',
   },
   {
     name: 'Sadie Lewis',
-    image:{Varun},
+    image:Varun,
     position: 'Sales',
   },
   {
     name: 'Anubhav',
-    image:{Akash},
+    image:Akash,
     position: 'Marketing Lead',
   },
   {
     name: 'Deepika Ramesh',
-    image:{Sanat},
+    image:Sanat,
     position: 'Front-end developer',
   },
   {
     name: 'Jordi Santiago',
-    image:{Ankush},
+    image:Ankush,
     position: 'Front-end developer',
   },
   {
     name: 'Kerim Fahri',
-    image:{prakhar},
+    image:prakhar,
     position: 'Back-end developer',
-  },
+  }
+  
 ]
 
 export function AboutPageOne() {
