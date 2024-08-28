@@ -3,6 +3,10 @@
 import React from 'react'
 import { Menu, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import e2 from "../assets/e2.jpg";
+import e3 from "../assets/e3.jpg";
+import e4 from "../assets/e4.jpg";
+
 
 export function BlogPageTwo() {
     return (
@@ -42,7 +46,7 @@ export function BlogPageTwo() {
                                 <a className="group mb-8 md:flex" href="#">
                                     <img
                                         className="h-40 w-48 rounded-lg"
-                                        src='src\assets\e2.jpg'
+                                        src={e2}
                                         alt=""
                                     />
                                     <div className="my-4 pt-2 md:ml-6 md:mt-0">
@@ -55,7 +59,7 @@ export function BlogPageTwo() {
                                 <a className="group mb-8 md:flex" href="#">
                                     <img
                                         className="h-40 w-48 rounded-lg"
-                                        src='src\assets\e3.jpg'
+                                        src={e3}
                                         alt=""
                                     />
                                     <div className="my-4 pt-2 md:ml-6 md:mt-0">
@@ -68,7 +72,7 @@ export function BlogPageTwo() {
                                 <a className="group mb-8 md:flex" href="#">
                                     <img
                                         className="h-40 w-48 rounded-lg"
-                                        src='src\assets\e4.jpg'
+                                        src={e4}
                                         alt=""
                                     />
                                     <div className="my-4 pt-2 md:ml-6 md:mt-0">

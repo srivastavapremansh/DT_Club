@@ -2,6 +2,8 @@
 
 import React from 'react'
 import { Menu, X, MapPin } from 'lucide-react'
+import s2 from '../assets/s2.jpeg'
+import a2 from '../assets/a2.png'
 
 const locations = [
   {
@@ -47,7 +49,7 @@ const users = [
     position: 'Sales',
   },
   {
-    name: 'Thilde Olaisen',
+    name: 'Anubhav',
     image:
       'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=600&w=600',
     position: 'Marketing Lead',
@@ -96,7 +98,7 @@ export function AboutPageOne() {
         <div className="w-full space-y-4">
           <img
             className="h-[100px] w-full rounded-xl object-contain md:h-full"
-            src="src\assets\s2.jpeg"
+            src={s2}
             alt=""
           />
         </div>
@@ -173,7 +175,7 @@ export function AboutPageOne() {
           </div>
           <div className="md:mt-o mt-10 w-full  object-contain">
             <img
-              src="src\assets\a2.png"
+              src={a2}
               alt="Getting Started"
               className="rounded-lg"
             />

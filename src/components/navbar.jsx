@@ -3,6 +3,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
+import l1_t from "../assets/l1_t.png"
+import l1 from "../assets/l1.svg"
 
 const menuItems = [
   {
@@ -39,7 +41,7 @@ export function ExampleNavbarThree() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
-            <img src="src\assets\l1_t.png" alt="" className='w-[40px] h-[40px]' />
+            <img src={l1_t} alt="" className='w-[40px] h-[40px]' />
           </span>
           <span className="font-bold"><span className='text-red-600'>Design</span> Thinking Club</span>
         </div>
@@ -79,7 +81,7 @@ export function ExampleNavbarThree() {
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
                     <span>
-                      <img src="src\assets\l1.svg" alt="" srcset="" className='h-[30px] w-[36px]' />
+                      <img src={l1} alt="" srcset="" className='h-[30px] w-[36px]' />
                     </span>
                     <span className="font-bold"><span className='text-red-600'>Design</span>  Thinking Club</span>
                   </div>
