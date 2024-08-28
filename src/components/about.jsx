@@ -26,8 +26,8 @@ const locations = [
 const users = [
   {
     name: 'Priyanshi',
-    image:
-      'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=600&w=600&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
+    image:"https:drive.google.com/uc?export=view&id=1UV7c5yaEO_3jpOtEyoiWBWTrbxHmzj1M",
+
     position: 'Designer Head',
   },
   {
