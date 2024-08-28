@@ -34,44 +34,44 @@ const locations = [
 
 const users = [
   {
-    name: 'Gabrielle Fernandez',
-    image:{priyanshi},
+    name: 'Priyanshi',
+    image:priyanshi,
     position: 'Marketing Lead',
   },
   {
-    name: 'Victória Silva',
-    image:{Aman},
+    name: 'Aman Varshney',
+    image:Aman,
     position: 'Back-end developer',
   },
   {
-    name: 'Gabrielle Fernandez',
-    image:{Toshak},
-    position: 'Sales',
+    name: 'Toshak  Bhat',
+    image:Toshak,
+    position: 'Technical lead',
   },
   {
-    name: 'Sadie Lewis',
-    image:{Varun},
-    position: 'Sales',
+    name: 'Varun Pandey',
+    image:Varun,
+    position: 'Social media head',
   },
   {
-    name: 'Anubhav',
-    image:{Akash},
-    position: 'Marketing Lead',
+    name: 'Aakash',
+    image:Akash,
+    position: 'Research lead',
   },
   {
-    name: 'Deepika Ramesh',
-    image:{Sanat},
-    position: 'Front-end developer',
+    name: 'Sanat Sharma',
+    image:Sanat,
+    position: 'Research lead',
   },
   {
-    name: 'Jordi Santiago',
-    image:{Ankush},
-    position: 'Front-end developer',
+    name: 'Ankush Chaudhary',
+    image:Ankush,
+    position: 'Marketing lead',
   },
   {
-    name: 'Kerim Fahri',
-    image:{prakhar},
-    position: 'Back-end developer',
+    name: 'Prakhar Mishra',
+    image:prakhar,
+    position: 'Event Management lead',
   },
 ]
 

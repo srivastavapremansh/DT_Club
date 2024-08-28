@@ -1,104 +1,105 @@
 import React from 'react'
 import { Menu, X } from 'lucide-react'
 import a2 from '../assets/a2.png'
+import clubs from "../assets/blogimg/clubs.jpeg"
+import ebuli from "../assets/blogimg/ebuli.jpeg"
+import krishi from "../assets/blogimg/krishi.jpeg"
+import machao from "../assets/blogimg/machao.jpeg"
+import mentor from "../assets/blogimg/mentor.jpeg"
+import scholar from "../assets/blogimg/scholar.jpeg"
+import sessions from "../assets/blogimg/sessions.jpeg"
+import swadesh from "../assets/blogimg/swadesh.jpeg"
+import teach from "../assets/blogimg/teach.jpeg"
 
 const posts = [
   {
-    category: 'Design',
-    title: '10 Tips for Crafting the Perfect UX Portfolio',
-    description: 'Learn how to showcase your design skills and stand out in a crowded job market.',
-    author: 'Emily Lee',
+    category: 'SWADESH INTERN',
+    title: 'It is an open source platform, provides internship and mentoring',
+    description: 'Founders - Aditya Kumar Mishra, Sushant Verma and Madhvendra Singh',
+    author: 'Aditya Kumar Mishra',
     date: '3 April 2023',
     avatar: 'https://www.uifaces.co/wp-content/uploads/2022/01/uifaces-logo.svg',
-    poster:
-      'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80',
+    poster:swadesh,
   },
   {
-    category: 'Technology',
-    title: 'The Future of Mobile App Development',
+    category: 'KRISHI KALYAN',
+    title: 'It is a service based company which provides service to bank to provide loans to farmers',
     description:
-      'Discover the latest trends and techniques that will shape the future of mobile app development.',
-    author: 'John Smith',
+      ' Founder - Madhvendra Singh',
+    author: 'Madhvendra Singh',
     date: '1 April 2023',
     avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
     poster:
-      'https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+      krishi,
   },
   {
-    category: 'Business',
-    title: 'How to Launch a Successful Startup',
+    category: 'MACHAO',
+    title: 'Machao is a Merchandise company',
     description:
-      'Learn the essential steps to launch a successful startup and make your dreams a reality.',
-    author: 'Sarah Brown',
+      ' Founders - Raghuvendhar, Sarthak Jain and Sachindanand Singh',
+    author: 'Sarthak Jain',
     date: '28 March 2023',
     avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-    poster:
-      'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    poster:machao,
   },
   {
-    category: 'Health',
-    title: 'The Benefits of Mindfulness Meditation',
+    category: ' SCHOLAR RANK AI',
+    title: ' ScholarRank AI is a comprehensive platform for online learning, teaching, assessment and proctoring.',
     description:
       'Discover the scientifically proven benefits of mindfulness meditation and how it can improve your health and wellbeing.',
-    author: 'David Kim',
+    author: ' Founders - Ritik Kumar',
     date: '25 March 2023',
     avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
-    poster:
-      'https://images.unsplash.com/photo-1591228127791-8e2eaef098d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    poster:scholar,
   },
   {
-    category: 'Education',
-    title: 'Why Learning a Second Language is Important',
+    category: 'More about us',
+    title: 'Personalized Mentoring Sessions',
     description:
-      'Explore the benefits of learning a second language and how it can improve your cognitive abilities.',
-    author: 'Maria Rodriguez',
+      ' Receive one-on-one guidance from experienced mentors who will help you refine your ideas and unlock your full potential.',
+    author: 'Madhvendra Singh',
     date: '22 March 2023',
     avatar: 'https://randomuser.me/api/portraits/men/97.jpg',
-    poster:
-      'https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    poster:sessions,
   },
   {
-    category: 'Travel',
-    title: 'The Best Places to Visit in Europe',
-    description: 'Discover the top destinations in Europe and plan your dream vacation.',
-    author: 'Alex Johnson',
+    category: 'SEGUE 2.0',
+    title: 'Enhanced Problem-Solving Skills',
+    description: 'Develop and sharpen your problem-solving abilities through innovative challenges and collaborative exercises',
+    author: 'Madhvendra Singh',
     date: '19 March 2023',
     avatar: 'https://randomuser.me/api/portraits/men/99.jpg',
-    poster:
-      'https://images.unsplash.com/photo-1663616132598-e9a1ee3ad186?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    poster:teach,
   },
   {
-    category: 'Food',
-    title: 'How to Make the Perfect Cup of Coffee',
+    category: 'EBULLIENCE-24',
+    title: 'Events of DESIGN THINKING CLUB',
     description:
-      'Learn the secrets to making the perfect cup of coffee and impress your friends and family.',
-    author: 'Thomas Lee',
+      'Pitch your startup ideas to judges and win exciting prices',
+    author: 'Madhvendra Singh',
     date: '16 March 2023',
     avatar: 'https://randomuser.me/api/portraits/women/63.jpg',
-    poster:
-      'https://images.unsplash.com/photo-1426260193283-c4daed7c2024?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80',
+    poster:ebuli,
   },
   {
-    category: 'Fashion',
-    title: 'The Latest Fashion Trends for Spring 2023',
+    category: 'MORE ABOUT US',
+    title: 'Constructive Feedback on Your Ideas',
     description:
-      'Discover the hottest fashion trends for the upcoming spring season and stay ahead of the curve.',
-    author: 'Jessica Kim',
+      'Get valuable insights and balanced feedback on your ideas, including their strengths and areas for improvement, to make them even better.',
+    author: 'Madhvendra Singh',
     date: '13 March 2023',
     avatar: 'https://randomuser.me/api/portraits/women/47.jpg',
-    poster:
-      'https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    poster:clubs,
   },
   {
-    category: 'Sports',
-    title: 'The Benefits of Yoga for Athletes',
+    category: 'MORE ABOUT US',
+    title: ' Hands-On Experience',
     description:
-      'Learn how practicing yoga can improve your athletic performance and prevent injuries.',
-    author: 'Michael Johnson',
+      ' Engage in real-world projects and ground level work that puts your skills to the test and helps you gain practical experience',
+    author: 'Madhvendra Singh',
     date: '10 March 2023',
     avatar: 'https://randomuser.me/api/portraits/men/86.jpg',
-    poster:
-      'https://plus.unsplash.com/premium_photo-1663012880499-47f1ca50459d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    poster:mentor,
   },
 ]
 
