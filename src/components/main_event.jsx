@@ -3,6 +3,7 @@
 import React from 'react'
 import { Menu, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import e1 from "../assets/e1.jpg";
 import e2 from "../assets/e2.jpg";
 import e3 from "../assets/e3.jpg";
 import e4 from "../assets/e4.jpg";
@@ -26,7 +27,7 @@ export function BlogPageTwo() {
                                 <a className="group block w-full" href="#">
                                     <img
                                         className="mb-5 block w-full rounded-lg object-contain"
-                                        src='src\assets\e1.jpg'
+                                        src={e1}
                                         alt=""
                                     />
                                     <span className="mb-5 block text-gray-500">Jul 20, 2023</span>
