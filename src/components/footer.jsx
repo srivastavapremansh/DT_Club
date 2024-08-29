@@ -97,6 +97,18 @@ export function FooterThree() {
             </div>
           </div>
         </div>
+        <h1 className='w-full text-center bg-slate-200'>
+          Developed and Designed by
+          <span className='text-red-600'>
+            <a href="https://github.com/AnubhavSingh99" target="_blank" rel="noopener noreferrer">Anubhav</a>,
+          </span>{' '}
+          <span className='text-red-600'>
+            <a href="https://github.com/PalakBhatnagar172" target="_blank" rel="noopener noreferrer">Palak</a>,
+          </span>{' '}
+          <span className='text-red-600'>
+            <a href="https://github.com/ToshakBhat" target="_blank" rel="noopener noreferrer">Toshak</a>
+          </span>
+        </h1>
       </div>
     </section>
   )
