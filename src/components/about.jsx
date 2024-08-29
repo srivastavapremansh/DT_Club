@@ -34,12 +34,15 @@ const locations = [
 
 const users = [
   {
+
     name: 'Priyanshi',
     image:priyanshi,
     position: 'Marketing Lead',
   },
   {
     name: 'Aman Varshney',
+    name: 'Victória Silva',
+
     image:Aman,
     position: 'Back-end developer',
   },
@@ -73,6 +76,7 @@ const users = [
     image:prakhar,
     position: 'Event Management lead',
   },
+  
 ]
 
 export function AboutPageOne() {
