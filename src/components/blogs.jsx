@@ -13,46 +13,6 @@ import teach from "../assets/blogimg/teach.jpeg"
 
 const posts = [
   {
-    category: 'SWADESH INTERN',
-    title: 'It is an open source platform, provides internship and mentoring',
-    description: 'Founders - Aditya Kumar Mishra, Sushant Verma and Madhvendra Singh',
-    author: 'Aditya Kumar Mishra',
-    date: '3 April 2023',
-    avatar: 'https://www.uifaces.co/wp-content/uploads/2022/01/uifaces-logo.svg',
-    poster:swadesh,
-  },
-  {
-    category: 'KRISHI KALYAN',
-    title: 'It is a service based company which provides service to bank to provide loans to farmers',
-    description:
-      ' Founder - Madhvendra Singh',
-    author: 'Madhvendra Singh',
-    date: '1 April 2023',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-    poster:
-      krishi,
-  },
-  {
-    category: 'MACHAO',
-    title: 'Machao is a Merchandise company',
-    description:
-      ' Founders - Raghuvendhar, Sarthak Jain and Sachindanand Singh',
-    author: 'Sarthak Jain',
-    date: '28 March 2023',
-    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-    poster:machao,
-  },
-  {
-    category: ' SCHOLAR RANK AI',
-    title: ' ScholarRank AI is a comprehensive platform for online learning, teaching, assessment and proctoring.',
-    description:
-      'Discover the scientifically proven benefits of mindfulness meditation and how it can improve your health and wellbeing.',
-    author: ' Founders - Ritik Kumar',
-    date: '25 March 2023',
-    avatar: 'https://randomuser.me/api/portraits/men/46.jpg',
-    poster:scholar,
-  },
-  {
     category: 'More about us',
     title: 'Personalized Mentoring Sessions',
     description:
@@ -114,8 +74,7 @@ export function BlogPageOne() {
             Events
           </p>
           <p className="max-w-4xl text-base text-gray-600 md:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veritatis voluptates
-            neque itaque repudiandae sint, explicabo assumenda quam ratione placeat?
+            Discover the exciting events and workshops that will help you gain valuable insights, develop new skills, and connect with like-minded individuals
           </p>
         </div>
         {/*Upcoming event*/}
