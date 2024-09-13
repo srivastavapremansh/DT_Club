@@ -27,6 +27,7 @@ import arya from "../assets/images/arya.jpeg"
 import saksham from "../assets/images/saksham.jpeg"
 import divyanshu from "../assets/images/divyanshu.jpeg"
 import ansh from "../assets/images/ansh.jpeg"
+import abhay from "../assets/images/abhay.webp"
 
 
 import madhvendra from "../assets/images/Madhvendra.jpeg"
@@ -71,6 +72,11 @@ const users = [
   {
     name: 'Varun Pandey',
     image: Varun,
+    position: 'Social media lead',
+  },
+  {
+    name: 'Abhay Singh',
+    image:abhay,
     position: 'Social media lead',
   },
   {
