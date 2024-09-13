@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import CardComponent from './developers'
 import { Menu, X, MapPin } from 'lucide-react'
 import s2 from '../assets/s2.jpeg'
 import a2 from '../assets/a2.png'
@@ -237,6 +238,8 @@ export function AboutPageOne() {
             </div>
           ))}
         </div>
+        <p className="my-8 text-3xl font-bold text-gray-900 md:text-4xl"><span className='text-red-600'>Technical</span>  Team</p>
+        <CardComponent/>
         {/* Hiring Banner */}
         <div className="flex flex-col items-center gap-x-4 gap-y-4 py-16 md:flex-row">
           <div className="space-y-6">
