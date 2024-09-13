@@ -29,6 +29,7 @@ import ansh from "../assets/images/ansh.jpeg"
 
 
 import madhvendra from "../assets/images/Madhvendra.jpeg"
+import { Link } from 'react-router-dom'
 
 
 const locations = [
@@ -53,47 +54,47 @@ const users = [
   {
 
     name: 'Madhvendra',
-    image:madhvendra,
+    image: madhvendra,
     position: 'President',
   },
   {
     name: 'Priyanshi',
-    image:priyanshi,
+    image: priyanshi,
     position: 'Designing lead',
   },
   {
     name: 'Toshak  Bhat',
-    image:Toshak,
+    image: Toshak,
     position: 'Technical lead',
   },
   {
     name: 'Varun Pandey',
-    image:Varun,
+    image: Varun,
     position: 'Social media lead',
   },
   {
     name: 'Aakash',
-    image:Akash,
+    image: Akash,
     position: 'Research lead',
   },
   {
     name: 'Sanat Sharma',
-    image:Sanat,
+    image: Sanat,
     position: 'Research lead',
   },
   {
     name: 'Ankush Chaudhary',
-    image:Ankush,
+    image: Ankush,
     position: 'Marketing lead',
   },
   {
     name: 'Prakhar Mishra',
-    image:prakhar,
+    image: prakhar,
     position: 'Event Management lead',
   },
   {
     name: 'Rishita Rai',
-    image:rishita,
+    image: rishita,
     position: 'Event Management Co-lead',
   },
   {
@@ -108,63 +109,63 @@ const users = [
   },
   {
     name: 'Swati Jha',
-    image:swati,
+    image: swati,
     position: 'Marketing Co-lead',
   },
   {
     name: 'Divya Pratap',
-    image:divya,
+    image: divya,
     position: 'Marketing Co-lead',
   },
   {
     name: 'Abhinav',
-    image:abhinav,
+    image: abhinav,
     position: 'Marketing Co-lead',
   },
   {
     name: 'Siddhi Arora',
-    image:siddhi,
+    image: siddhi,
     position: 'Research Co-lead',
   },
   {
     name: 'Shakti Singh',
-    image:shakti,
+    image: shakti,
     position: 'Research Co-lead',
   },
   {
     name: 'Palak Srivastava',
-    image:Palaks,
+    image: Palaks,
     position: 'Social-media Co-lead',
   },
   {
     name: 'Nandani',
-    image:nandani,
+    image: nandani,
     position: 'Social-media Co-lead',
   },
   {
     name: 'Arya Kumari',
-    image:arya,
+    image: arya,
     position: 'Outreach Co-lead',
   },
   {
     name: 'Saksham Patel',
-    image:saksham,
+    image: saksham,
     position: 'Event Capturing Team',
   },
   {
     name: 'Divyanshu Singh',
-    image:divyanshu,
+    image: divyanshu,
     position: 'Video Editing team',
   },
   {
     name: 'Ansh Pratap Singh',
-    image:ansh,
+    image: ansh,
     position: 'Video Editing team',
   },
 
 
 
-  
+
 ]
 
 export function AboutPageOne() {
@@ -259,12 +260,15 @@ export function AboutPageOne() {
               insights and set the stage for your future career in
               tech!
             </p>
-            <button
-              type="button"
-              className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-            >
-              Join Now
-            </button>
+            <Link
+              to="https://uc64l098ghp.typeform.com/to/shvofxtd">
+              <button
+                type="button"
+                className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                Join Now
+              </button>
+            </Link>
           </div>
           <div className="md:mt-o mt-10 w-full  object-contain">
             <img
@@ -276,7 +280,7 @@ export function AboutPageOne() {
         </div>
       </div>
       <hr className="mt-6" />
-      
+
     </div>
   )
 }
