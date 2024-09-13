@@ -10,6 +10,7 @@ import scholar from "../assets/blogimg/scholar.jpeg"
 import sessions from "../assets/blogimg/sessions.jpeg"
 import swadesh from "../assets/blogimg/swadesh.jpeg"
 import teach from "../assets/blogimg/teach.jpeg"
+import { Link } from 'react-router-dom'
 
 const posts = [
   {
@@ -95,12 +96,15 @@ export function BlogPageOne() {
             insights and set the stage for your future career in
             tech!
           </p>
+          <Link
+          to="https://uc64l098ghp.typeform.com/to/shvofxtd">
           <button
             type="button"
             className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Join Now
           </button>
+          </Link>
         </div>
         <div className="md:mt-o mt-10 w-full  object-contain">
           <img
