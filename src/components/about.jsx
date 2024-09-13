@@ -11,6 +11,7 @@ import Akash from "../assets/images/Akash.jpeg"
 import Sanat from "../assets/images/Sanat.jpg"
 import Ankush from "../assets/images/Ankush.jpg"
 import prakhar from "../assets/images/prakhar.jpeg"
+
 import rishita from "../assets/images/rishita.jpeg"
 import anubhav from "../assets/images/anubhav.jpg"
 import Palak from "../assets/images/Palak.jpg"
@@ -25,6 +26,9 @@ import arya from "../assets/images/arya.jpeg"
 import saksham from "../assets/images/saksham.jpeg"
 import divyanshu from "../assets/images/divyanshu.jpeg"
 import ansh from "../assets/images/ansh.jpeg"
+
+
+import madhvendra from "../assets/images/Madhvendra.jpeg"
 
 
 const locations = [
@@ -48,9 +52,14 @@ const locations = [
 const users = [
   {
 
+    name: 'Madhvendra',
+    image:madhvendra,
+    position: 'President',
+  },
+  {
     name: 'Priyanshi',
     image:priyanshi,
-    position: 'Marketing Lead',
+    position: 'Designing lead',
   },
   {
     name: 'Toshak  Bhat',
@@ -60,7 +69,7 @@ const users = [
   {
     name: 'Varun Pandey',
     image:Varun,
-    position: 'Social media head',
+    position: 'Social media lead',
   },
   {
     name: 'Aakash',
