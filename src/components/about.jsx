@@ -78,11 +78,6 @@ const users = [
     position: 'Research lead',
   },
   {
-    name: 'Sanat Sharma',
-    image: Sanat,
-    position: 'Research lead',
-  },
-  {
     name: 'Ankush Chaudhary',
     image: Ankush,
     position: 'Marketing lead',
