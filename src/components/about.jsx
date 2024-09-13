@@ -5,14 +5,31 @@ import { Menu, X, MapPin } from 'lucide-react'
 import s2 from '../assets/s2.jpeg'
 import a2 from '../assets/a2.png'
 import priyanshi from "../assets/images/priyanshi.jpeg"
-import Aman from "../assets/images/Aman.jpeg"
 import Toshak from "../assets/images/Toshak.jpeg"
 import Varun from "../assets/images/Varun.jpeg"
 import Akash from "../assets/images/Akash.jpeg"
 import Sanat from "../assets/images/Sanat.jpg"
 import Ankush from "../assets/images/Ankush.jpg"
 import prakhar from "../assets/images/prakhar.jpeg"
+
+import rishita from "../assets/images/rishita.jpeg"
+import anubhav from "../assets/images/anubhav.jpg"
+import Palak from "../assets/images/Palak.jpg"
+import swati from "../assets/images/swati.jpeg"
+import divya from "../assets/images/divya.jpeg"
+import abhinav from "../assets/images/abhinav.jpeg"
+import siddhi from "../assets/images/siddhi.jpeg"
+import shakti from "../assets/images/shakti.jpeg"
+import Palaks from "../assets/images/Palaks.jpeg"
+import nandani from "../assets/images/nandani.jpeg"
+import arya from "../assets/images/arya.jpeg"
+import saksham from "../assets/images/saksham.jpeg"
+import divyanshu from "../assets/images/divyanshu.jpeg"
+import ansh from "../assets/images/ansh.jpeg"
+
+
 import madhvendra from "../assets/images/Madhvendra.jpeg"
+
 
 const locations = [
   {
@@ -74,6 +91,79 @@ const users = [
     image:prakhar,
     position: 'Event Management lead',
   },
+  {
+    name: 'Rishita Rai',
+    image:rishita,
+    position: 'Event Management Co-lead',
+  },
+  {
+    name: 'Anubhav Singh',
+    image: anubhav,
+    position: 'Technical Co-lead',
+  },
+  {
+    name: 'Palak Bhatnagar',
+    image: Palak,
+    position: 'Technical Co-lead',
+  },
+  {
+    name: 'Swati Jha',
+    image:swati,
+    position: 'Marketing Co-lead',
+  },
+  {
+    name: 'Divya Pratap',
+    image:divya,
+    position: 'Marketing Co-lead',
+  },
+  {
+    name: 'Abhinav',
+    image:abhinav,
+    position: 'Marketing Co-lead',
+  },
+  {
+    name: 'Siddhi Arora',
+    image:siddhi,
+    position: 'Research Co-lead',
+  },
+  {
+    name: 'Shakti Singh',
+    image:shakti,
+    position: 'Research Co-lead',
+  },
+  {
+    name: 'Palak Srivastava',
+    image:Palaks,
+    position: 'Social-media Co-lead',
+  },
+  {
+    name: 'Nandani',
+    image:nandani,
+    position: 'Social-media Co-lead',
+  },
+  {
+    name: 'Arya Kumari',
+    image:arya,
+    position: 'Outreach Co-lead',
+  },
+  {
+    name: 'Saksham Patel',
+    image:saksham,
+    position: 'Event Capturing Team',
+  },
+  {
+    name: 'Divyanshu Singh',
+    image:divyanshu,
+    position: 'Video Editing team',
+  },
+  {
+    name: 'Ansh Pratap Singh',
+    image:ansh,
+    position: 'Video Editing team',
+  },
+
+
+
   
 ]
 
