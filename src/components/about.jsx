@@ -155,11 +155,6 @@ const users = [
     position: 'Event Capturing Team',
   },
   {
-    name: 'Divyanshu Singh',
-    image: divyanshu,
-    position: 'Video Editing team',
-  },
-  {
     name: 'Ansh Pratap Singh',
     image: ansh,
     position: 'Video Editing team',
