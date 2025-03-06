@@ -1,5 +1,5 @@
 import React from 'react'
-import Madhvendra from "../assets/images/Madhvendra.jpeg"
+import Madhvendra from "../assets/images/Madhvendra.JPG"
 
 export function TestimonialOne() {
     return (

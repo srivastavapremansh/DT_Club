@@ -5,32 +5,26 @@ import CardComponent from './developers'
 import { Menu, X, MapPin } from 'lucide-react'
 import s2 from '../assets/s2.jpeg'
 import a2 from '../assets/a2.png'
-import priyanshi from "../assets/images/priyanshi.jpeg"
-import Toshak from "../assets/images/Toshak.jpeg"
-import Varun from "../assets/images/Varun.jpeg"
-import Akash from "../assets/images/Akash.jpeg"
-import Sanat from "../assets/images/Sanat.jpg"
-import Ankush from "../assets/images/Ankush.jpg"
-import prakhar from "../assets/images/prakhar.jpeg"
+import priyanshi from "../assets/images/priyanshi.JPG"
+import Akash from "../assets/images/aakash.JPG"
+import Sanat from "../assets/images/Sanat.JPG"
+import Ankush from "../assets/images/abhay2.JPG"
+import prakhar from "../assets/images/Prakhar.JPG"
 
-import rishita from "../assets/images/rishita.jpeg"
-import anubhav from "../assets/images/anubhav.jpg"
-import Palak from "../assets/images/Palak.jpg"
-import swati from "../assets/images/swati.jpeg"
-import divya from "../assets/images/divya.jpeg"
-import abhinav from "../assets/images/abhinav.jpeg"
-import siddhi from "../assets/images/siddhi.jpeg"
-import shakti from "../assets/images/shakti.jpeg"
-import Palaks from "../assets/images/Palaks.jpeg"
-import nandani from "../assets/images/nandani.jpeg"
-import arya from "../assets/images/arya.jpeg"
-import saksham from "../assets/images/saksham.jpeg"
-import divyanshu from "../assets/images/divyanshu.jpeg"
-import ansh from "../assets/images/ansh.jpeg"
-import abhay from "../assets/images/abhay.webp"
+import rishita from "../assets/images/rishita.JPG"
+import anubhav from "../assets/images/anubhav (2).JPG"
+import Palak from "../assets/images/palak (2).JPG"
+import swati from "../assets/images/swati.JPG"
+import divya from "../assets/images/divya.JPG"
+import abhinav from "../assets/images/abhinav (2).JPG"
+import siddhi from "../assets/images/siddhi.JPG"
+import shakti from "../assets/images/shakti.JPG"
+import Palaks from "../assets/images/palaks.jpeg"
+import nandani from "../assets/images/nandani.JPG"
+import saksham from "../assets/images/saksham (2).JPG"
+import abhay from "../assets/images/Abhay.JPG"
 
-
-import madhvendra from "../assets/images/Madhvendra.jpeg"
+import madhvendra from "../assets/images/Madhvendra.JPG"
 import { Link } from 'react-router-dom'
 
 
@@ -47,14 +41,13 @@ const locations = [
   },
   {
     title: 'Foster Community Engagement ',
-    timings: ' We actively collaborate with local organizations, businesses, and community members to create shared value and foster a spirit of collective problemsolving.',
+    timings: ' We actively collaborate with local organizations, businesses, and community members to create shared value and foster a spirit of collective problem-solving.',
     address: '',
   },
 ]
 
 const users = [
   {
-
     name: 'Madhvendra',
     image: madhvendra,
     position: 'President',
@@ -65,18 +58,8 @@ const users = [
     position: 'Designing lead',
   },
   {
-    name: 'Toshak  Bhat',
-    image: Toshak,
-    position: 'Technical lead',
-  },
-  {
-    name: 'Varun Pandey',
-    image: Varun,
-    position: 'Social media lead',
-  },
-  {
     name: 'Abhay Singh',
-    image:abhay,
+    image: abhay,
     position: 'Social media lead',
   },
   {
@@ -145,25 +128,11 @@ const users = [
     position: 'Social-media Co-lead',
   },
   {
-    name: 'Arya Kumari',
-    image: arya,
-    position: 'Outreach Co-lead',
-  },
-  {
     name: 'Saksham Patel',
     image: saksham,
     position: 'Event Capturing Team',
   },
-  {
-    name: 'Ansh Pratap Singh',
-    image: ansh,
-    position: 'Video Editing team',
-  },
-
-
-
-
-]
+].filter(user => user.image);
 
 export function AboutPageOne() {
 
@@ -217,8 +186,6 @@ export function AboutPageOne() {
             <p className="text-3xl font-bold text-gray-900 md:text-4xl"><span className='text-red-600'>Meet</span> our team</p>
             <p className="max-w-4xl text-base text-gray-700 md:text-xl">
               Our philosophy is simple—bring together a diverse group of creative thinkers and cultivate a collaborative environment where innovative ideas thrive.
-
-
             </p>
             <div></div>
           </div>
@@ -255,7 +222,7 @@ export function AboutPageOne() {
               and more. This is your chance to explore different
               fields, understand what sparks your interest, and
               find the path that best suits your passion and skills.
-              Don’t miss out on this opportunity to gain valuable
+              Don't miss out on this opportunity to gain valuable
               insights and set the stage for your future career in
               tech!
             </p>

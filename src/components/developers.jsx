@@ -1,16 +1,9 @@
 import React from 'react'
-import anubhav from '../assets/images/anubhav.jpg'
-import palak from '../assets/images/Palak.jpg'
-import Toshak from '../assets/images/Toshak.jpeg'
+import anubhav from '../assets/images/anubhav (2).JPG'
+import palak from '../assets/images/palak (2).JPG'
 
 export default function CardComponent() {
     const people = [
-        {
-            name: 'Toshak Bhat',
-            description: 'Android Dev | Blogspot writer | Innovate 1.0 Runner-up 🏆',
-            image: Toshak,
-            profileUrl: 'https://www.linkedin.com/in/toshakbhat/'
-        },
         {
             name: 'Anubhav Singh',
             description: 'Student at NIET | Freelancer | Front-end developer | Graphic Designer | Editor ',
