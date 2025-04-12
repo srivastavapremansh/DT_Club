@@ -21,8 +21,9 @@ import Palaks from "../assets/images/palaks.JPG"
 import nandani from "../assets/images/nandani.JPG"
 import saksham from "../assets/images/saksham (2).JPG"
 import abhay from "../assets/images/Abhay.JPG"
-import mahi from "../assets/images/mahi.JPG"
+import mahi from "../assets/images/mahi.png"
 import madhvendra from "../assets/images/Madhvendra.JPG"
+import ansh from "../assets/images/ansh.jpg"
 import { Link } from 'react-router-dom'
 
 
@@ -63,17 +64,17 @@ const users = [
   {
     name: 'Abhay Singh',
     image: abhay,
-    position: 'Social media lead',
+    position: 'lead',
   },
   {
     name: 'Aakash',
     image: Akash,
-    position: 'Research lead',
+    position: 'lead',
   },
   {
     name: 'Abhay trivedi',
     image: Ankush,
-    position: 'Marketing lead',
+    position: 'lead',
   },
   {
     name: 'Rishita Rai',
@@ -128,6 +129,11 @@ const users = [
   {
     name: 'Saksham Patel',
     image: saksham,
+    position: 'Event Capturing Team',
+  },
+  {
+    name: 'Ansh',
+    image: ansh,
     position: 'Event Capturing Team',
   },
 ].filter(user => user.image);
