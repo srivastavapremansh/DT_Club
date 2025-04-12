@@ -10,12 +10,34 @@ import scholar from "../assets/blogimg/scholar.jpeg"
 import sessions from "../assets/blogimg/sessions.jpeg"
 import swadesh from "../assets/blogimg/swadesh.jpeg"
 import teach from "../assets/blogimg/teach.jpeg"
+import arambh from "../assets/images/Arambh.JPG"
+import coi from "../assets/images/coi.jpg"
 import { Link } from 'react-router-dom'
 
 const posts = [
   {
-    category: 'More about us',
-    title: 'Personalized Mentoring Sessions',
+    category: 'COI 3.0',
+    title: 'Calclus of Innovation 3.0',
+    description:
+      'Calclus of Innovation 3.0 is a comprehensive program designed to foster innovation and entrepreneurship among students.',
+    author: 'Madhvendra Singh',
+    date: '22 March 2023',
+    avatar: 'https://randomuser.me/api/portraits/men/97.jpg',
+    poster:coi,
+  },
+  {
+    category: 'ARAMBH',
+    title: 'Arambh-25',
+    description:
+      'Arambh that connects students with mentors and provides guidance on various aspects of their academic and professional journeys.',
+    author: 'Madhvendra Singh',
+    date: '22 March 2023',
+    avatar: 'https://randomuser.me/api/portraits/men/97.jpg',
+    poster:arambh,
+  },
+  {
+    category: 'COI 2.0',
+    title: 'Calclus of Innovation 2.0',
     description:
       ' Receive one-on-one guidance from experienced mentors who will help you refine your ideas and unlock your full potential.',
     author: 'Madhvendra Singh',
@@ -25,7 +47,7 @@ const posts = [
   },
   {
     category: 'SEGUE 2.0',
-    title: 'Enhanced Problem-Solving Skills',
+    title: 'SEGUE',
     description: 'Develop and sharpen your problem-solving abilities through innovative challenges and collaborative exercises',
     author: 'Madhvendra Singh',
     date: '19 March 2023',
@@ -34,7 +56,7 @@ const posts = [
   },
   {
     category: 'EBULLIENCE-24',
-    title: 'Events of DESIGN THINKING CLUB',
+    title: 'Ebullience',
     description:
       'Pitch your startup ideas to judges and win exciting prices',
     author: 'Madhvendra Singh',
@@ -43,8 +65,8 @@ const posts = [
     poster:ebuli,
   },
   {
-    category: 'MORE ABOUT US',
-    title: 'Constructive Feedback on Your Ideas',
+    category: 'TD 2.0',
+    title: 'THINK DIFFRENT 2.0',
     description:
       'Get valuable insights and balanced feedback on your ideas, including their strengths and areas for improvement, to make them even better.',
     author: 'Madhvendra Singh',
@@ -53,8 +75,8 @@ const posts = [
     poster:clubs,
   },
   {
-    category: 'MORE ABOUT US',
-    title: ' Hands-On Experience',
+    category: 'COI 1.0',
+    title: ' Calclus of Innovation 1.0',
     description:
       ' Engage in real-world projects and ground level work that puts your skills to the test and helps you gain practical experience',
     author: 'Madhvendra Singh',

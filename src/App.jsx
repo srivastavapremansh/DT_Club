@@ -5,6 +5,7 @@ import {Events_pg} from "./pages/events"
 import { Contact_us } from "./pages/contact_us"
 import { Start_ups } from "./pages/startups_pg"
 import { Privacy } from "./pages/privacy"
+import { HackathonLandingPage } from "./pages/hackathon-landing-page"
 const App = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/contact" element={<Contact_us/>} />
         <Route path="/startups" element={<Start_ups/>} />
         <Route path="/privacy" element={<Privacy/>} />
+        <Route path="/hackathon" element={<HackathonLandingPage/>} />
       </Routes>
     </div>
   )

@@ -9,9 +9,7 @@ import priyanshi from "../assets/images/priyanshi.JPG"
 import Akash from "../assets/images/aakash.JPG"
 import Sanat from "../assets/images/Sanat.JPG"
 import Ankush from "../assets/images/abhay2.JPG"
-import prakhar from "../assets/images/Prakhar.JPG"
-
-import rishita from "../assets/images/rishita.JPG"
+import rishita from "../assets/images/rishita2.JPG"
 import anubhav from "../assets/images/anubhav (2).JPG"
 import Palak from "../assets/images/palak (2).JPG"
 import swati from "../assets/images/swati.JPG"
@@ -19,11 +17,11 @@ import divya from "../assets/images/divya.JPG"
 import abhinav from "../assets/images/abhinav (2).JPG"
 import siddhi from "../assets/images/siddhi.JPG"
 import shakti from "../assets/images/shakti.JPG"
-import Palaks from "../assets/images/palaks.jpeg"
+import Palaks from "../assets/images/palaks.JPG"
 import nandani from "../assets/images/nandani.JPG"
 import saksham from "../assets/images/saksham (2).JPG"
 import abhay from "../assets/images/Abhay.JPG"
-
+import mahi from "../assets/images/mahi.JPG"
 import madhvendra from "../assets/images/Madhvendra.JPG"
 import { Link } from 'react-router-dom'
 
@@ -53,9 +51,14 @@ const users = [
     position: 'President',
   },
   {
+    name: 'Mahi',
+    image: mahi,
+    position: 'Vice President',
+  },
+  {
     name: 'Priyanshi',
     image: priyanshi,
-    position: 'Designing lead',
+    position: 'Vice President',
   },
   {
     name: 'Abhay Singh',
@@ -68,14 +71,9 @@ const users = [
     position: 'Research lead',
   },
   {
-    name: 'Ankush Chaudhary',
+    name: 'Abhay trivedi',
     image: Ankush,
     position: 'Marketing lead',
-  },
-  {
-    name: 'Prakhar Mishra',
-    image: prakhar,
-    position: 'Event Management lead',
   },
   {
     name: 'Rishita Rai',

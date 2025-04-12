@@ -24,6 +24,10 @@ const menuItems = [
     href: '/events',
   },
   {
+    name: 'Hackathon',
+    href: '/hackathon',
+  },
+  {
     name: 'Startups',
     href: '/startups',
   },
