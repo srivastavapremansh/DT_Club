@@ -62,8 +62,8 @@ const users = [
     position: 'Vice President',
   },
   {
-    name: 'Abhay Singh',
-    image: abhay,
+    name: 'Abhay trivedi',
+    image: Ankush,
     position: 'lead',
   },
   {
@@ -71,60 +71,61 @@ const users = [
     image: Akash,
     position: 'lead',
   },
+  
   {
-    name: 'Abhay trivedi',
-    image: Ankush,
+    name: 'Abhay Singh',
+    image: abhay,
     position: 'lead',
   },
   {
     name: 'Rishita Rai',
     image: rishita,
-    position: 'Event Management Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Anubhav Singh',
     image: anubhav,
-    position: 'Technical Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Palak Bhatnagar',
     image: Palak,
-    position: 'Technical Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Swati Jha',
     image: swati,
-    position: 'Marketing Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Divya Pratap',
     image: divya,
-    position: 'Marketing Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Abhinav',
     image: abhinav,
-    position: 'Marketing Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Siddhi Arora',
     image: siddhi,
-    position: 'Research Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Shakti Singh',
     image: shakti,
-    position: 'Research Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Palak Srivastava',
     image: Palaks,
-    position: 'Social-media Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Nandani',
     image: nandani,
-    position: 'Social-media Co-lead',
+    position: 'Co-lead',
   },
   {
     name: 'Saksham Patel',
