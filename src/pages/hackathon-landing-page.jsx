@@ -56,7 +56,7 @@ export function HackathonLandingPage() {
               height={40}
               className="rounded"
             />
-            <span className="text-lg font-bold text-red-600">Calculas of Innovation</span>
+            <span className="text-lg font-bold text-red-600">Calculus of Innovation</span>
           </div>
 
           {isMobile ? (
@@ -146,7 +146,7 @@ export function HackathonLandingPage() {
               Event Completed Successfully
             </div>
             <h1 className="animate-fade-in-up mb-6 font-extrabold tracking-tight text-[clamp(2rem,5vw,3.5rem)]">
-              Calculas of Innovation 3.0
+              Calculus of Innovation 3.0
             </h1>
             <p className="animate-fade-in-up animation-delay-200 mx-auto mb-8 max-w-3xl text-[clamp(1rem,2vw,1.5rem)] text-white/90">
               Thank you to all participants, speakers, and sponsors who made this event a huge success!
@@ -176,8 +176,8 @@ export function HackathonLandingPage() {
             <div className="grid gap-8 md:grid-cols-2 md:gap-12">
               <div className="flex flex-col justify-center">
                 <p className="mb-4 text-lg text-gray-700">
-                  Calculas of Innovation 3.0 was a premier design thinking hackathon that brought together creative
-                  minds, innovators, and problem-solvers from across the globe. This year's edition focused on
+                  Calculus of Innovation 3.0 was a premier design thinking hackathon that brought together creative
+                  minds, innovators, and problem-solvers from NIET. This year's edition focused on
                   leveraging technology to address real-world challenges through collaborative innovation.
                 </p>
                 <p className="mb-4 text-lg text-gray-700">
@@ -186,7 +186,7 @@ export function HackathonLandingPage() {
                   to cutting-edge resources, this was an opportunity to turn ideas into reality.
                 </p>
                 <p className="text-lg text-gray-700">
-                  The event was held on April 12-14, 2025 and featured over 500 participants from 30 countries, making
+                  The event was held on March 21-22, 2025 and featured over 500 participants, making
                   it our most diverse and impactful hackathon yet.
                 </p>
               </div>
@@ -229,8 +229,8 @@ export function HackathonLandingPage() {
                     <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
                 </div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">500+ Participants</h3>
-                <p className="text-gray-600">From 30 countries came together to collaborate and innovate</p>
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">750+registration (150 + teams)</h3>
+                <p className="text-gray-600">From NIET came together to collaborate and innovate</p>
               </div>
 
               <div className="rounded-lg bg-white p-6 shadow-md transition-transform hover:scale-105">
@@ -252,7 +252,7 @@ export function HackathonLandingPage() {
                     <path d="M10 22h4" />
                   </svg>
                 </div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">120 Projects</h3>
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">75 Projects</h3>
                 <p className="text-gray-600">Innovative solutions across 6 different tracks</p>
               </div>
 
@@ -260,7 +260,7 @@ export function HackathonLandingPage() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-red-600">
                   <Award className="h-6 w-6" />
                 </div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">$25,000 in Prizes</h3>
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">11 prototypes (each from finale round)</h3>
                 <p className="text-gray-600">Awarded to the most innovative and impactful solutions</p>
               </div>
 
@@ -283,7 +283,7 @@ export function HackathonLandingPage() {
                     <path d="m7 21 5-5 5 5" />
                   </svg>
                 </div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">25 Workshops</h3>
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">48 hrs+ mentoring (by 15 mentors)</h3>
                 <p className="text-gray-600">On design thinking, innovation, and technical skills</p>
               </div>
             </div>
@@ -300,10 +300,10 @@ export function HackathonLandingPage() {
                   <Award className="h-10 w-10 text-red-600" />
                 </div>
                 <h3 className="mb-2 text-2xl font-bold text-gray-900">First Prize</h3>
-                <p className="mb-4 text-center text-xl font-bold text-red-600">Team Innovate</p>
+                <p className="mb-4 text-center text-xl font-bold text-red-600">Creative bytes</p>
                 <h4 className="mb-2 text-lg font-semibold">MediConnect</h4>
                 <p className="mb-6 text-center text-gray-700">
-                  An AI-powered platform connecting patients in remote areas with specialized healthcare providers
+                  Emergency Vehicle Lane Clearance
                 </p>
                 <Link 
                   to="#" 
@@ -318,10 +318,10 @@ export function HackathonLandingPage() {
                   <Award className="h-8 w-8 text-gray-600" />
                 </div>
                 <h3 className="mb-2 text-xl font-bold text-gray-900">Second Prize</h3>
-                <p className="mb-4 text-center text-lg font-bold text-gray-600">Team EcoSolutions</p>
+                <p className="mb-4 text-center text-lg font-bold text-gray-600">Brutecoders</p>
                 <h4 className="mb-2 text-lg font-semibold">GreenTrack</h4>
                 <p className="mb-6 text-center text-gray-700">
-                  A blockchain-based platform for tracking carbon footprints and incentivizing sustainable practices
+                  addresing loneliness among elderly individuals
                 </p>
                 <Link 
                   to="#" 
@@ -336,10 +336,10 @@ export function HackathonLandingPage() {
                   <Award className="h-7 w-7 text-orange-600" />
                 </div>
                 <h3 className="mb-2 text-lg font-bold text-gray-900">Third Prize</h3>
-                <p className="mb-4 text-center text-lg font-bold text-orange-600">Team FinWizards</p>
+                <p className="mb-4 text-center text-lg font-bold text-orange-600">Tech Monarch</p>
                 <h4 className="mb-2 text-lg font-semibold">MicroLearn</h4>
                 <p className="mb-6 text-center text-gray-700">
-                  An adaptive learning platform that personalizes financial education for underserved communities
+                  impact of excessive machinery use on food nutrition
                 </p>
                 <Link 
                   to="#" 
@@ -432,150 +432,9 @@ export function HackathonLandingPage() {
         </section>
 
         {/* Speakers Section */}
-        <section id="speakers" className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">Featured Speakers</h2>
-            <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {[
-                {
-                  name: "Sarah Johnson",
-                  role: "Innovation Director, TechCorp",
-                  image: "/placeholder.svg",
-                },
-                {
-                  name: "Michael Chen",
-                  role: "CTO, Future Labs",
-                  image: "/placeholder.svg",
-                },
-                {
-                  name: "Priya Sharma",
-                  role: "Design Lead, CreativeX",
-                  image: "/placeholder.svg",
-                },
-                {
-                  name: "David Rodriguez",
-                  role: "Founder, InnovateTech",
-                  image: "/placeholder.svg",
-                },
-                {
-                  name: "Emma Wilson",
-                  role: "Product Manager, GlobalSoft",
-                  image: "/placeholder.svg",
-                },
-                {
-                  name: "James Lee",
-                  role: "Venture Capitalist, Seed Fund",
-                  image: "/placeholder.svg",
-                },
-                {
-                  name: "Aisha Patel",
-                  role: "UX Researcher, DesignHub",
-                  image: "/placeholder.svg",
-                },
-                {
-                  name: "Robert Kim",
-                  role: "AI Specialist, DataMinds",
-                  image: "/placeholder.svg",
-                },
-              ].map((speaker, index) => (
-                <div
-                  key={index}
-                  className="group relative overflow-hidden rounded-lg bg-white shadow-md transition-all hover:shadow-xl"
-                >
-                  <div className="aspect-square overflow-hidden">
-                    <img
-                      src={speaker.image || "/placeholder.svg"}
-                      alt={speaker.name}
-                      className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-bold text-gray-900">{speaker.name}</h3>
-                    <p className="text-sm text-gray-600">{speaker.role}</p>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-3 bg-white p-3 opacity-0 transition-opacity group-hover:opacity-100">
-                    <a href="#" className="text-gray-600 hover:text-red-600">
-                      <Linkedin className="h-5 w-5" />
-                      <span className="sr-only">LinkedIn</span>
-                    </a>
-                    <a href="#" className="text-gray-600 hover:text-red-600">
-                      <Twitter className="h-5 w-5" />
-                      <span className="sr-only">Twitter</span>
-                    </a>
-                    <a href="#" className="text-gray-600 hover:text-red-600">
-                      <Youtube className="h-5 w-5" />
-                      <span className="sr-only">YouTube</span>
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
 
-            <div className="mt-12 text-center">
-              <Link 
-                to="#" 
-                className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
-              >
-                Watch Speaker Sessions
-              </Link>
-            </div>
-          </div>
-        </section>
 
         {/* Sponsors Section */}
-        <section id="sponsors" className="bg-gray-50 py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <h2 className="mb-4 text-center text-3xl font-bold text-gray-900 md:text-4xl">Our Sponsors</h2>
-            <p className="mb-12 text-center text-lg text-gray-600">
-              Thank you to our amazing sponsors for making this event possible
-            </p>
-
-            <div className="mb-12">
-              <h3 className="mb-6 text-center text-xl font-semibold text-gray-900">Platinum Sponsors</h3>
-              <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex items-center justify-center">
-                    <img
-                      src="/placeholder.svg"
-                      alt={`Platinum Sponsor ${i}`}
-                      className="max-h-24 w-auto grayscale transition-all hover:grayscale-0"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-12">
-              <h3 className="mb-6 text-center text-xl font-semibold text-gray-900">Gold Sponsors</h3>
-              <div className="grid grid-cols-3 gap-8 md:grid-cols-4">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="flex items-center justify-center">
-                    <img
-                      src="/placeholder.svg"
-                      alt={`Gold Sponsor ${i}`}
-                      className="max-h-16 w-auto grayscale transition-all hover:grayscale-0"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="mb-6 text-center text-xl font-semibold text-gray-900">Silver Sponsors</h3>
-              <div className="grid grid-cols-4 gap-6 md:grid-cols-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="flex items-center justify-center">
-                    <img
-                      src="/placeholder.svg"
-                      alt={`Silver Sponsor ${i}`}
-                      className="max-h-12 w-auto grayscale transition-all hover:grayscale-0"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* FAQ Section */}
         <section id="faq" className="py-16 md:py-24">
@@ -680,21 +539,21 @@ export function HackathonLandingPage() {
               <div className="prose max-w-none">
                 <p>
                   The third edition of Calculas of Innovation has concluded with tremendous success, bringing together
-                  over 500 participants from 30 countries for an unforgettable weekend of innovation, collaboration, and
+                  over 750 participants from NIET for an unforgettable weekend of innovation, collaboration, and
                   impact.
                 </p>
 
                 <p>
                   The event kicked off with an inspiring keynote from Sarah Johnson, Innovation Director at TechCorp,
                   who challenged participants to think beyond conventional solutions and embrace design thinking as a
-                  framework for tackling complex problems.
+                  framework for tackling complex problems........I need to change this.....
                 </p>
 
                 <p>
-                  Over the course of 48 hours, 120 teams worked tirelessly to develop prototypes across six tracks:
+                  Over the course of 48 hours, 150 teams worked tirelessly to develop prototypes across six tracks:
                   HealthTech, FinTech, EdTech, Sustainability, Smart Cities, and Open Innovation. The energy and
                   creativity in the venue were palpable as teams collaborated, iterated, and refined their ideas with
-                  support from our dedicated mentors.
+                  support from our dedicated mentors.....chnage this too...
                 </p>
 
                 <p>
@@ -801,7 +660,7 @@ export function HackathonLandingPage() {
                   height={40}
                   className="mr-2 rounded bg-white"
                 />
-                <span className="text-lg font-bold text-white">Calculas of Innovation</span>
+                <span className="text-lg font-bold text-white">Calculus of Innovation</span>
               </div>
               <p className="mb-4 text-gray-400">
                 Empowering the next generation of innovators through collaborative problem-solving and design thinking.
@@ -837,18 +696,18 @@ export function HackathonLandingPage() {
               <div className="space-y-3">
                 <div className="flex items-start">
                   <Mail className="mr-2 h-5 w-5 text-red-500" />
-                  <span className="text-gray-400">info@calculasofinnovation.com</span>
+                  <span className="text-gray-400">dtclub@niet.co.in</span>
                 </div>
                 <div className="flex items-start">
                   <Phone className="mr-2 h-5 w-5 text-red-500" />
-                  <span className="text-gray-400">+1 (123) 456-7890</span>
+                  <span className="text-gray-400">+91 9412013756</span>
                 </div>
                 <div className="flex items-start">
                   <MapPin className="mr-2 h-5 w-5 text-red-500" />
                   <span className="text-gray-400">
-                    Innovation Center, 123 Tech Street
+                  sfs lab , plot 19 , niet greater Noida
                     <br />
-                    San Francisco, CA 94107
+                    Greater Noida, Uttar Pradesh 201306
                   </span>
                 </div>
                 <div className="flex space-x-4 pt-2">
@@ -875,7 +734,7 @@ export function HackathonLandingPage() {
 
           <div className="mt-8 border-t border-gray-800 pt-8 text-center">
             <p className="text-sm text-gray-400">
-              &copy; {new Date().getFullYear()} Calculas of Innovation. All rights reserved.
+              &copy; {new Date().getFullYear()} Calculus of Innovation. All rights reserved.
             </p>
           </div>
         </div>
