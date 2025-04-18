@@ -42,6 +42,66 @@ export function HackathonLandingPage() {
       setActiveAccordion(itemId);
     }
   };
+//for red border on hover
+  const boxShadowStyles = {
+    default: '0 0 4px rgba(255, 0, 0, 0)',
+    hover: 'inset 0 0 5px rgba(255, 0, 0, 0.6), 0 0 10px rgba(255, 0, 0, 0.4)',
+  };
+  
+  const applyBoxShadow = (e, shadow) => {
+    e.currentTarget.style.boxShadow = shadow;
+  };
+  
+  const transitionStyle = {
+    boxShadow: '0.3s ease-in-out',
+  };
+  
+  // Reusable Components for winner cards and 75+project cards
+  const Card = ({ title, subtitle, icon }) => (
+    <div
+      className="rounded-lg bg-white p-6 shadow-md transition-transform hover:scale-105"
+      style={{
+        boxShadow: boxShadowStyles.default,
+        transition: transitionStyle.boxShadow,
+      }}
+      onMouseEnter={(e) => applyBoxShadow(e, boxShadowStyles.hover)}
+      onMouseLeave={(e) => applyBoxShadow(e, boxShadowStyles.default)}
+    >
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-red-600">
+        {icon}
+      </div>
+      <h3 className="mb-2 text-xl font-semibold text-gray-900">{title}</h3>
+      <p className="text-gray-600">{subtitle}</p>
+    </div>
+  );
+  const WinnerCard = ({ position, team, project, gradientFrom, icon, prizeColor, link }) => (
+    <div
+      className={`flex flex-col items-center rounded-lg bg-gradient-to-b ${gradientFrom} to-white p-8 shadow-lg transition-transform hover:scale-105`}
+      style={{
+        boxShadow: boxShadowStyles.default,
+        transition: transitionStyle.boxShadow,
+      }}
+      onMouseEnter={(e) => applyBoxShadow(e, boxShadowStyles.hover)}
+      onMouseLeave={(e) => applyBoxShadow(e, boxShadowStyles.default)}
+    >
+      <div className="mb-4 flex items-center justify-center rounded-full" style={{ backgroundColor: `${prizeColor}20`, height: '5rem', width: '5rem' }}>
+        {icon}
+      </div>
+      <h3 className="mb-2 text-2xl font-bold text-gray-900">{position}</h3>
+      <p className={`mb-4 text-center text-xl font-bold ${prizeColor}`}>{team}</p>
+      <p className="mb-6 text-center text-gray-700">{project}</p>
+      
+      <a
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
+>
+        View Project
+      </a>
+    </div>
+  );
+  
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -72,66 +132,110 @@ export function HackathonLandingPage() {
               {mobileMenuOpen && (
                 <div className="fixed inset-0 top-16 z-50 bg-white p-4 shadow-md">
                   <nav className="flex h-[calc(100vh-4rem)] flex-col space-y-4 overflow-y-auto">
-                    <Link to="#" className="text-red-600 font-medium">
-                      Home
-                    </Link>
-                    <Link to="#about" className="text-gray-600 hover:text-red-600">
-                      About
-                    </Link>
-                    <Link to="#highlights" className="text-gray-600 hover:text-red-600">
-                      Highlights
-                    </Link>
-                    <Link to="#winners" className="text-gray-600 hover:text-red-600">
-                      Winners
-                    </Link>
-                    <Link to="#gallery" className="text-gray-600 hover:text-red-600">
-                      Gallery
-                    </Link>
-                    <Link to="#speakers" className="text-gray-600 hover:text-red-600">
-                      Speakers
-                    </Link>
-                    <Link to="#sponsors" className="text-gray-600 hover:text-red-600">
-                      Sponsors
-                    </Link>
-                    <Link to="#faq" className="text-gray-600 hover:text-red-600">
-                      FAQ
-                    </Link>
+                  <a 
+                href="#home" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </a>
+              <a 
+                href="#about" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a 
+                href="#highlights" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Highlights
+              </a>
+              <a 
+                href="#winners" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Winners
+              </a>
+              <a 
+                href="#gallery" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Gallery
+              </a>
+              <a 
+                href="#faq" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                FAQ
+              </a>
+              <a 
+                href="#recap" 
+                className="inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 focus:outline-none"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Event Recap
+              </a>
                   </nav>
                 </div>
               )}
             </div>
           ) : (
             <nav className="flex items-center space-x-6">
-              <Link to="#" className="text-red-600 font-medium">
+              <a 
+                href="#home" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Home
-              </Link>
-              <Link to="#about" className="text-gray-600 hover:text-red-600">
+              </a>
+              <a 
+                href="#about" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 About
-              </Link>
-              <Link to="#highlights" className="text-gray-600 hover:text-red-600">
+              </a>
+              <a 
+                href="#highlights" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Highlights
-              </Link>
-              <Link to="#winners" className="text-gray-600 hover:text-red-600">
+              </a>
+              <a 
+                href="#winners" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Winners
-              </Link>
-              <Link to="#gallery" className="text-gray-600 hover:text-red-600">
+              </a>
+              <a 
+                href="#gallery" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Gallery
-              </Link>
-              <Link to="#speakers" className="text-gray-600 hover:text-red-600">
-                Speakers
-              </Link>
-              <Link to="#sponsors" className="text-gray-600 hover:text-red-600">
-                Sponsors
-              </Link>
-              <Link to="#faq" className="text-gray-600 hover:text-red-600">
+              </a>
+              <a 
+                href="#faq" 
+                className="text-gray-600 hover:text-red-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 FAQ
-              </Link>
-              <Link 
-                to="#recap" 
+              </a>
+              <a 
+                href="#recap" 
                 className="inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 focus:outline-none"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Event Recap
-              </Link>
+              </a>
             </nav>
           )}
         </div>
@@ -139,7 +243,7 @@ export function HackathonLandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-red-700 to-red-500 py-20 text-white">
+        <section id="home" className="relative overflow-hidden bg-gradient-to-r from-red-700 to-red-500 py-20 text-white">
           <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10"></div>
           <div className="container relative z-10 mx-auto px-4 py-12 text-center md:py-24">
             <div className="inline-block rounded-full bg-white/20 px-4 py-1 text-sm font-medium mb-4">
@@ -192,12 +296,22 @@ export function HackathonLandingPage() {
               </div>
               <div className="flex items-center justify-center">
                 <img
-                  src="/placeholder.svg"
+                  src="/src/assets/coi/calofinnovation.jpg"
                   alt="Innovation Illustration"
                   width={500}
                   height={400}
                   className="w-full max-w-[500px] rounded-lg shadow-lg"
                   loading="lazy"
+                  style={{
+                    boxShadow: '0 0 0 4px rgba(255, 0, 0, 0)', // Initial transparent outline
+                    transition: 'box-shadow 0.3s ease-in-out', // Smooth transition for the outline
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.boxShadow = 'inset 0 0 8px rgba(255, 0, 0, 0.6), 0 0 10px rgba(255, 0, 0, 0.4)'; // Red inset and blur on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.boxShadow = '0 0 0 6px rgba(255, 0, 0, 0)'; // Revert to transparent outline
+                  }}
                 />
               </div>
             </div>
@@ -209,8 +323,10 @@ export function HackathonLandingPage() {
           <div className="container mx-auto px-4">
             <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">Event Highlights</h2>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-lg bg-white p-6 shadow-md transition-transform hover:scale-105">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-red-600">
+              <Card
+                title="750+ registrations (150+ teams)"
+                subtitle="From NIET came together to collaborate and innovate"
+                icon={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -228,13 +344,13 @@ export function HackathonLandingPage() {
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
                     <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                   </svg>
-                </div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">750+registration (150 + teams)</h3>
-                <p className="text-gray-600">From NIET came together to collaborate and innovate</p>
-              </div>
+                }
+              />
 
-              <div className="rounded-lg bg-white p-6 shadow-md transition-transform hover:scale-105">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-red-600">
+              <Card
+                title="75 Projects"
+                subtitle="Innovative solutions across 6 different tracks"
+                icon={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -251,21 +367,19 @@ export function HackathonLandingPage() {
                     <path d="M9 18h6" />
                     <path d="M10 22h4" />
                   </svg>
-                </div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">75 Projects</h3>
-                <p className="text-gray-600">Innovative solutions across 6 different tracks</p>
-              </div>
+                }
+              />
 
-              <div className="rounded-lg bg-white p-6 shadow-md transition-transform hover:scale-105">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-red-600">
-                  <Award className="h-6 w-6" />
-                </div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">11 prototypes (each from finale round)</h3>
-                <p className="text-gray-600">Awarded to the most innovative and impactful solutions</p>
-              </div>
+              <Card
+                title="11 prototypes (each from finale round)"
+                subtitle="Awarded to the most innovative and impactful solutions"
+                icon={<Award className="h-6 w-6" />}
+              />
 
-              <div className="rounded-lg bg-white p-6 shadow-md transition-transform hover:scale-105">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-red-600">
+              <Card
+                title="48 hrs+ mentoring (by 15 mentors)"
+                subtitle="On design thinking, innovation, and technical skills"
+                icon={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -281,11 +395,9 @@ export function HackathonLandingPage() {
                     <path d="M2 3h20" />
                     <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" />
                     <path d="m7 21 5-5 5 5" />
-                  </svg>
-                </div>
-                <h3 className="mb-2 text-xl font-semibold text-gray-900">48 hrs+ mentoring (by 15 mentors)</h3>
-                <p className="text-gray-600">On design thinking, innovation, and technical skills</p>
-              </div>
+                    </svg>
+                }
+              />
             </div>
           </div>
         </section>
@@ -295,60 +407,34 @@ export function HackathonLandingPage() {
           <div className="container mx-auto px-4">
             <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">Winning Projects</h2>
             <div className="grid gap-8 md:grid-cols-3">
-              <div className="flex flex-col items-center rounded-lg bg-gradient-to-b from-red-50 to-white p-8 shadow-lg transition-transform hover:scale-105">
-                <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-red-100">
-                  <Award className="h-10 w-10 text-red-600" />
-                </div>
-                <h3 className="mb-2 text-2xl font-bold text-gray-900">First Prize</h3>
-                <p className="mb-4 text-center text-xl font-bold text-red-600">Creative bytes</p>
-                <h4 className="mb-2 text-lg font-semibold">MediConnect</h4>
-                <p className="mb-6 text-center text-gray-700">
-                  Emergency Vehicle Lane Clearance
-                </p>
-                <Link 
-                  to="#" 
-                  className="inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
-                >
-                  View Project
-                </Link>
+                <WinnerCard
+            position="First Prize"
+            team="Creative Bytes"
+            project="Emergency Vehicle Lane Clearance"
+            gradientFrom="from-red-50"
+            prizeColor="text-red-600"
+            icon={<Award className="h-10 w-10 text-red-600" />}
+            link="https://web-esahara.vercel.app"
+          />
+          <WinnerCard
+            position="Second Prize"
+            team="Brutecoders"
+            project="Addressing loneliness among elderly individuals"
+            gradientFrom="from-gray-50"
+            prizeColor="text-gray-600"
+            icon={<Award className="h-8 w-8 text-gray-600" />}
+              link="https://web-esahara.vercel.app"
+          />
+          <WinnerCard
+            position="Third Prize"
+            team="Tech Monarch"
+            project="Impact of excessive machinery use on food nutrition"
+            gradientFrom="from-orange-50"
+            prizeColor="text-orange-600"
+            icon={<Award className="h-7 w-7 text-orange-600" />}
+            link="https://web-esahara.vercel.app"
+          />
               </div>
-
-              <div className="flex flex-col items-center rounded-lg bg-gradient-to-b from-gray-50 to-white p-8 shadow-lg transition-transform hover:scale-105">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
-                  <Award className="h-8 w-8 text-gray-600" />
-                </div>
-                <h3 className="mb-2 text-xl font-bold text-gray-900">Second Prize</h3>
-                <p className="mb-4 text-center text-lg font-bold text-gray-600">Brutecoders</p>
-                <h4 className="mb-2 text-lg font-semibold">GreenTrack</h4>
-                <p className="mb-6 text-center text-gray-700">
-                  addresing loneliness among elderly individuals
-                </p>
-                <Link 
-                  to="#" 
-                  className="inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
-                >
-                  View Project
-                </Link>
-              </div>
-
-              <div className="flex flex-col items-center rounded-lg bg-gradient-to-b from-orange-50 to-white p-8 shadow-lg transition-transform hover:scale-105">
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-orange-100">
-                  <Award className="h-7 w-7 text-orange-600" />
-                </div>
-                <h3 className="mb-2 text-lg font-bold text-gray-900">Third Prize</h3>
-                <p className="mb-4 text-center text-lg font-bold text-orange-600">Tech Monarch</p>
-                <h4 className="mb-2 text-lg font-semibold">MicroLearn</h4>
-                <p className="mb-6 text-center text-gray-700">
-                  impact of excessive machinery use on food nutrition
-                </p>
-                <Link 
-                  to="#" 
-                  className="inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
-                >
-                  View Project
-                </Link>
-              </div>
-            </div>
 
             <div className="mt-12 rounded-lg bg-red-50 p-6">
               <h3 className="mb-4 text-center text-xl font-bold text-gray-900">Special Category Winners</h3>
@@ -400,10 +486,18 @@ export function HackathonLandingPage() {
                     Watch Event Highlights
                   </Link>
                 </div>
-                <img
-                  src="/placeholder.svg"
+               {/* <img
+                  src="\src\assets\coi\eventhighlight.mp4"
                   alt="Event video thumbnail"
                   className="h-full w-full object-cover"
+                />*/}
+                <video
+                  src="/src/assets/coi/eventhighlight.mp4"
+                  className="h-full w-full object-cover rounded-xl"
+                  controls
+                  autoPlay
+                  muted
+                  loop
                 />
               </div>
             </div>
