@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Optional scroll smoothness */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Swiper Pagination Styling */
+.gallery-pagination .swiper-pagination-bullet {
+  background-color: #fecaca !important;   
+  opacity: 1 !important;
+  margin: 0 4px;
+}
+.gallery-pagination .swiper-pagination-bullet-active {
+  background-color: #dc2626 !important;
+}
