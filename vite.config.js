@@ -12,4 +12,9 @@ export default defineConfig({
       'react-masonry-css'
     ]
   }
+  build: {
+    rollupOptions: {
+      external: ['imagesloaded']
+    }
+  }
 })
