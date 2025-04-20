@@ -5,4 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.JPG', '**/*.jpeg', '**/*.png'],
+  optimizeDeps: {
+    include: [
+      'swiper',
+      'swiper/react',
+      'react-masonry-css'
+    ]
+  }
 })
