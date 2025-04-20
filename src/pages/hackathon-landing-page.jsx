@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import SwiperCore, { Pagination, Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Masonry from 'react-masonry-css';
 
 import {
@@ -22,8 +21,6 @@ import {
   Youtube,
 } from "lucide-react";
 
-SwiperCore.use([Pagination]);
-
 export function HackathonLandingPage() {
   const [activeAccordion, setActiveAccordion] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -32,8 +29,6 @@ export function HackathonLandingPage() {
   const galleryRef = useRef(null);
   const [showMasonry, setShowMasonry] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-
-
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 768px)');
@@ -73,8 +68,6 @@ export function HackathonLandingPage() {
     }
   }, [showMasonry, selectedImage]);
 
-  
-
   // Masonry breakpoints
   const breakpointColumnsObj = {
     default: 3,   
@@ -82,7 +75,7 @@ export function HackathonLandingPage() {
     768: 2,      
     480: 2
   };
-//for red border on hover
+  //for red border on hover
   const boxShadowStyles = {
     default: '0 0 4px rgba(255, 0, 0, 0)',
     hover: 'inset 0 0 5px rgba(255, 0, 0, 0.6), 0 0 10px rgba(255, 0, 0, 0.4)',
@@ -132,16 +125,15 @@ export function HackathonLandingPage() {
       <p className="mb-6 text-center text-gray-700">{project}</p>
       
       <a
-  href={link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
->
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
+      >
         View Project
       </a>
     </div>
   );
-  
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -172,55 +164,55 @@ export function HackathonLandingPage() {
               {mobileMenuOpen && (
                 <div className="fixed inset-0 top-16 z-50 bg-white p-4 shadow-md">
                   <nav className="flex h-[calc(100vh-4rem)] flex-col space-y-4 overflow-y-auto">
-                  <a 
-                href="#home" 
-                className="text-gray-600 hover:text-red-600"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </a>
-              <a 
-                href="#about" 
-                className="text-gray-600 hover:text-red-600"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </a>
-              <a 
-                href="#highlights" 
-                className="text-gray-600 hover:text-red-600"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Highlights
-              </a>
-              <a 
-                href="#winners" 
-                className="text-gray-600 hover:text-red-600"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Winners
-              </a>
-              <a 
-                href="#gallery" 
-                className="text-gray-600 hover:text-red-600"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Gallery
-              </a>
-              <a 
-                href="#faq" 
-                className="text-gray-600 hover:text-red-600"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                FAQ
-              </a>
-              <a 
-                href="#recap" 
-                className="inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 focus:outline-none"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Event Recap
-              </a>
+                    <a 
+                      href="#home" 
+                      className="text-gray-600 hover:text-red-600"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Home
+                    </a>
+                    <a 
+                      href="#about" 
+                      className="text-gray-600 hover:text-red-600"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      About
+                    </a>
+                    <a 
+                      href="#highlights" 
+                      className="text-gray-600 hover:text-red-600"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Highlights
+                    </a>
+                    <a 
+                      href="#winners" 
+                      className="text-gray-600 hover:text-red-600"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Winners
+                    </a>
+                    <a 
+                      href="#gallery" 
+                      className="text-gray-600 hover:text-red-600"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Gallery
+                    </a>
+                    <a 
+                      href="#faq" 
+                      className="text-gray-600 hover:text-red-600"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      FAQ
+                    </a>
+                    <a 
+                      href="#recap" 
+                      className="inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 focus:outline-none"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Event Recap
+                    </a>
                   </nav>
                 </div>
               )}
@@ -510,131 +502,143 @@ export function HackathonLandingPage() {
           </div>
         </section>
 
-              {/* Gallery Section */}
-      <section id="gallery" className="bg-gray-50 py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">
-            Event Gallery
-          </h2>
+        {/* Gallery Section */}
+        <section id="gallery" className="bg-gray-50 py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">
+              Event Gallery
+            </h2>
 
-          {/* Highlights Video */}
-          <div className="mb-12">
-            <div className="relative aspect-video overflow-hidden rounded-xl">
-              <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                <Link
-                  to="#"
-                  className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700"
-                >
-                  <Play className="mr-2 h-5 w-5" /> Watch Event Highlights
-                </Link>
-              </div>
-              <video
-                src="/src/assets/coi/eventhighlight.mp4"
-                className="h-full w-full object-cover rounded-xl"
-                controls
-                autoPlay
-                muted
-                loop
-              />
-            </div>
-          </div>
-
-          {/* Carousel */}
-          <Swiper
-              loop
-              centeredSlides
-              spaceBetween={30}
-              slidesPerView={1.2}
-              autoplay={{ delay: 1800, disableOnInteraction: false }}
-              pagination={{ clickable: true, el: '.gallery-pagination' }}
-              modules={[Pagination, Autoplay]}
-              breakpoints={{
-                640: { slidesPerView: 1.2 },
-                768: { slidesPerView: 2.2 },
-                1024: { slidesPerView: 3.2 },
-              }}
-              className="overflow-hidden rounded-lg"
-            >
-              {Array.from({ length: 8 }).map((_, index) => (
-                <SwiperSlide key={index}>
-                  <div
-                    className="rounded-xl overflow-hidden"
-                    style={{ boxShadow: boxShadowStyles.default, transition: transitionStyle.boxShadow }}
-                    onMouseEnter={(e) => applyBoxShadow(e, boxShadowStyles.hover)}
-                    onMouseLeave={(e) => applyBoxShadow(e, boxShadowStyles.default)}
+            {/* Highlights Video */}
+            <div className="mb-12">
+              <div className="relative aspect-video overflow-hidden rounded-xl">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+                  <Link
+                    to="#"
+                    className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700"
                   >
-                    <img
-                      src={`/src/assets/coi/${index + 1}.jpg`}
-                      alt={`Event photo ${index + 1}`}
-                      className="h-[300px] w-full object-cover transition-transform duration-300"
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-          <div className="gallery-pagination mt-4 flex justify-center" />
-
-          {/* Button to toggle full gallery */}
-          <div className="mt-8 text-center">
-            <button
-              onClick={() => setShowMasonry((prev) => !prev)}
-              className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
-            >
-              {showMasonry ? 'Hide Full Gallery' : 'View Full Gallery'}
-            </button>
-          </div>
-
-          {/* Masonry Grid on click */}
-          {showMasonry && (
-            <div className="mt-8">
-              <Masonry
-                breakpointCols={breakpointColumnsObj}
-                className="flex -ml-4 w-auto"
-                columnClassName="pl-4 bg-clip-padding"
-              >
-                {Array.from({ length: 20 }).map((_, idx) => (
-                  <div key={idx} className="mb-4">
-                    <img
-                      onClick={() => setSelectedImage(`/src/assets/coi/${idx + 1}.jpg`)}
-                      src={`/src/assets/coi/gallery/${idx + 1}.jpg`} // Directly use idx + 1 for 1-20
-                      alt={`Gallery ${idx + 1}`}
-                      width={400}
-                      height={300}
-                      className="w-full rounded-lg object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
-                    />
-                  </div>
-                ))}
-              </Masonry>
-            </div>
-          )}
-          {selectedImage && (
-            <div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm p-4"
-              onClick={() => setSelectedImage(null)}
-            >
-              <div
-                className="relative max-w-3xl w-full"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  onClick={() => setSelectedImage(null)}
-                  className="absolute top-0 right-0 m-2 text-white text-3xl font-bold hover:text-red-500"
-                >
-                  &times;
-                </button>
-                <img
-                  src={selectedImage}
-                  alt="Preview"
-                  className="rounded-lg w-full max-h-[90vh] object-contain mx-auto"
+                    <Play className="mr-2 h-5 w-5" /> Watch Event Highlights
+                  </Link>
+                </div>
+                <video
+                  src="/src/assets/coi/eventhighlight.mp4"
+                  className="h-full w-full object-cover rounded-xl"
+                  controls
+                  autoPlay
+                  muted
+                  loop
                 />
               </div>
             </div>
-          )}
 
+            {/* Carousel */}
+            <Slider
+              infinite={true}
+              centerMode={true}
+              centerPadding="30px"
+              slidesToShow={3}
+              slidesToScroll={1}
+              autoplay={true}
+              autoplaySpeed={1800}
+              responsive={[
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                  },
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 2,
+                  },
+                },
+                {
+                  breakpoint: 640,
+                  settings: {
+                    slidesToShow: 1,
+                  },
+                },
+              ]}
+              className="overflow-hidden rounded-lg"
+            >
+              {Array.from({ length: 8 }).map((_, index) => (
+                <div
+                  key={index}
+                  className="rounded-xl overflow-hidden"
+                  style={{ boxShadow: boxShadowStyles.default, transition: transitionStyle.boxShadow }}
+                  onMouseEnter={(e) => applyBoxShadow(e, boxShadowStyles.hover)}
+                  onMouseLeave={(e) => applyBoxShadow(e, boxShadowStyles.default)}
+                >
+                  <img
+                    src={`/src/assets/coi/${index + 1}.jpg`}
+                    alt={`Event photo ${index + 1}`}
+                    className="h-[300px] w-full object-cover transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </Slider>
 
-        </div>
-      </section>
+            <div className="gallery-pagination mt-4 flex justify-center" />
+
+            {/* Button to toggle full gallery */}
+            <div className="mt-8 text-center">
+              <button
+                onClick={() => setShowMasonry((prev) => !prev)}
+                className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
+              >
+                {showMasonry ? 'Hide Full Gallery' : 'View Full Gallery'}
+              </button>
+            </div>
+
+            {/* Masonry Grid on click */}
+            {showMasonry && (
+              <div className="mt-8">
+                <Masonry
+                  breakpointCols={breakpointColumnsObj}
+                  className="flex -ml-4 w-auto"
+                  columnClassName="pl-4 bg-clip-padding"
+                >
+                  {Array.from({ length: 20 }).map((_, idx) => (
+                    <div key={idx} className="mb-4">
+                      <img
+                        onClick={() => setSelectedImage(`/src/assets/coi/${idx + 1}.jpg`)}
+                        src={`/src/assets/coi/gallery/${idx + 1}.jpg`} // Directly use idx + 1 for 1-20
+                        alt={`Gallery ${idx + 1}`}
+                        width={400}
+                        height={300}
+                        className="w-full rounded-lg object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                      />
+                    </div>
+                  ))}
+                </Masonry>
+              </div>
+            )}
+            {selectedImage && (
+              <div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm p-4"
+                onClick={() => setSelectedImage(null)}
+              >
+                <div
+                  className="relative max-w-3xl w-full"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    onClick={() => setSelectedImage(null)}
+                    className="absolute top-0 right-0 m-2 text-white text-3xl font-bold hover:text-red-500"
+                  >
+                    &times;
+                  </button>
+                  <img
+                    src={selectedImage}
+                    alt="Preview"
+                    className="rounded-lg w-full max-h-[90vh] object-contain mx-auto"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <section id="faq" className="py-16 md:py-24">
@@ -800,35 +804,7 @@ export function HackathonLandingPage() {
             </div>
           </div>
         </section>
-
-        {/* Newsletter Section */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-3xl rounded-lg bg-red-50 p-8 text-center">
-              <h2 className="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">Stay Updated</h2>
-              <p className="mb-6 text-gray-700">
-                Subscribe to our newsletter for updates on future events, follow-up activities, and innovation resources
-              </p>
-              <form className="mx-auto flex max-w-md flex-col gap-2 sm:flex-row">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                  required
-                />
-                <button 
-                  type="submit" 
-                  className="inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 focus:outline-none sm:w-auto"
-                >
-                  Subscribe
-                </button>
-              </form>
-              <p className="mt-4 text-xs text-gray-500">We respect your privacy. Unsubscribe at any time.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Next Event Teaser */}
+      {/* Next Event Teaser */}
         <section className="bg-gradient-to-r from-red-700 to-red-500 py-16 text-white md:py-24">
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">Calculas of Innovation 4.0</h2>
