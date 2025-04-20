@@ -1,5 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import SwiperCore, { Pagination, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import Masonry from 'react-masonry-css';
+
 import {
   Award,
   Calendar,
@@ -15,10 +21,19 @@ import {
   Twitter,
   Youtube,
 } from "lucide-react";
+
+SwiperCore.use([Pagination]);
+
 export function HackathonLandingPage() {
   const [activeAccordion, setActiveAccordion] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isGalleryVisible, setIsGalleryVisible] = useState(false);
+  const galleryRef = useRef(null);
+  const [showMasonry, setShowMasonry] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 768px)');
@@ -41,6 +56,31 @@ export function HackathonLandingPage() {
     } else {
       setActiveAccordion(itemId);
     }
+  };
+
+   // Observer for gallery
+   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsGalleryVisible(entry.isIntersecting),
+      { root: null, threshold: 0.3 }
+    );
+    const el = galleryRef.current;
+
+    if (showMasonry && galleryRef.current) {
+      imagesLoaded(galleryRef.current, () => {
+        window.dispatchEvent(new Event('resize'));
+      });
+    }
+  }, [showMasonry, selectedImage]);
+
+  
+
+  // Masonry breakpoints
+  const breakpointColumnsObj = {
+    default: 3,   
+    1024: 3,
+    768: 2,      
+    480: 2
   };
 //for red border on hover
   const boxShadowStyles = {
@@ -470,65 +510,131 @@ export function HackathonLandingPage() {
           </div>
         </section>
 
-        {/* Gallery Section */}
-        <section id="gallery" className="bg-gray-50 py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">Event Gallery</h2>
+              {/* Gallery Section */}
+      <section id="gallery" className="bg-gray-50 py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 md:text-4xl">
+            Event Gallery
+          </h2>
 
-            <div className="mb-12">
-              <div className="relative aspect-video overflow-hidden rounded-xl">
-                <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                  <Link 
-                    to="#" 
-                    className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700 focus:outline-none"
+          {/* Highlights Video */}
+          <div className="mb-12">
+            <div className="relative aspect-video overflow-hidden rounded-xl">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+                <Link
+                  to="#"
+                  className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700"
+                >
+                  <Play className="mr-2 h-5 w-5" /> Watch Event Highlights
+                </Link>
+              </div>
+              <video
+                src="/src/assets/coi/eventhighlight.mp4"
+                className="h-full w-full object-cover rounded-xl"
+                controls
+                autoPlay
+                muted
+                loop
+              />
+            </div>
+          </div>
+
+          {/* Carousel */}
+          <Swiper
+              loop
+              centeredSlides
+              spaceBetween={30}
+              slidesPerView={1.2}
+              autoplay={{ delay: 1800, disableOnInteraction: false }}
+              pagination={{ clickable: true, el: '.gallery-pagination' }}
+              modules={[Pagination, Autoplay]}
+              breakpoints={{
+                640: { slidesPerView: 1.2 },
+                768: { slidesPerView: 2.2 },
+                1024: { slidesPerView: 3.2 },
+              }}
+              className="overflow-hidden rounded-lg"
+            >
+              {Array.from({ length: 8 }).map((_, index) => (
+                <SwiperSlide key={index}>
+                  <div
+                    className="rounded-xl overflow-hidden"
+                    style={{ boxShadow: boxShadowStyles.default, transition: transitionStyle.boxShadow }}
+                    onMouseEnter={(e) => applyBoxShadow(e, boxShadowStyles.hover)}
+                    onMouseLeave={(e) => applyBoxShadow(e, boxShadowStyles.default)}
                   >
-                    <Play className="mr-2 h-5 w-5" />
-                    Watch Event Highlights
-                  </Link>
-                </div>
-               {/* <img
-                  src="\src\assets\coi\eventhighlight.mp4"
-                  alt="Event video thumbnail"
-                  className="h-full w-full object-cover"
-                />*/}
-                <video
-                  src="/src/assets/coi/eventhighlight.mp4"
-                  className="h-full w-full object-cover rounded-xl"
-                  controls
-                  autoPlay
-                  muted
-                  loop
+                    <img
+                      src={`/src/assets/coi/${index + 1}.jpg`}
+                      alt={`Event photo ${index + 1}`}
+                      className="h-[300px] w-full object-cover transition-transform duration-300"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+          <div className="gallery-pagination mt-4 flex justify-center" />
+
+          {/* Button to toggle full gallery */}
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowMasonry((prev) => !prev)}
+              className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
+            >
+              {showMasonry ? 'Hide Full Gallery' : 'View Full Gallery'}
+            </button>
+          </div>
+
+          {/* Masonry Grid on click */}
+          {showMasonry && (
+            <div className="mt-8">
+              <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="flex -ml-4 w-auto"
+                columnClassName="pl-4 bg-clip-padding"
+              >
+                {Array.from({ length: 20 }).map((_, idx) => (
+                  <div key={idx} className="mb-4">
+                    <img
+                      onClick={() => setSelectedImage(`/src/assets/coi/${idx + 1}.jpg`)}
+                      src={`/src/assets/coi/gallery/${idx + 1}.jpg`} // Directly use idx + 1 for 1-20
+                      alt={`Gallery ${idx + 1}`}
+                      width={400}
+                      height={300}
+                      className="w-full rounded-lg object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    />
+                  </div>
+                ))}
+              </Masonry>
+            </div>
+          )}
+          {selectedImage && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm p-4"
+              onClick={() => setSelectedImage(null)}
+            >
+              <div
+                className="relative max-w-3xl w-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute top-0 right-0 m-2 text-white text-3xl font-bold hover:text-red-500"
+                >
+                  &times;
+                </button>
+                <img
+                  src={selectedImage}
+                  alt="Preview"
+                  className="rounded-lg w-full max-h-[90vh] object-contain mx-auto"
                 />
               </div>
             </div>
-
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-              {Array.from({ length: 8 }).map((_, index) => (
-                <div key={index} className="overflow-hidden rounded-lg">
-                  <img
-                    src={`/placeholder.svg`}
-                    alt={`Event photo ${index + 1}`}
-                    className="h-full w-full object-cover transition-transform hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 text-center">
-              <Link 
-                to="#" 
-                className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none"
-              >
-                View Full Gallery
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Speakers Section */}
+          )}
 
 
-        {/* Sponsors Section */}
+        </div>
+      </section>
 
         {/* FAQ Section */}
         <section id="faq" className="py-16 md:py-24">
