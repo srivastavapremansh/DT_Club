@@ -328,7 +328,7 @@ export function HackathonLandingPage() {
               </div>
               <div className="flex items-center justify-center">
                 <img
-                  src="/src/assets/coi/calofinnovation.jpg"
+                  src= '../assets/coi/calofinnovation.jpg'
                   alt="Innovation Illustration"
                   width={500}
                   height={400}
