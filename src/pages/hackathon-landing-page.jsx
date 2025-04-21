@@ -328,7 +328,7 @@ export function HackathonLandingPage() {
               </div>
               <div className="flex items-center justify-center">
                 <img
-                  src= '../assets/coi/calofinnovation.jpg'
+                  src= "/calofinnovation.jpg" //accessing file saved in public folder....
                   alt="Innovation Illustration"
                   width={500}
                   height={400}
