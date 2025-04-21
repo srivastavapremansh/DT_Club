@@ -328,7 +328,7 @@ export function HackathonLandingPage() {
               </div>
               <div className="flex items-center justify-center">
                 <img
-                  src= "/calofinnovation.jpg" //accessing file saved in public folder....
+                  src= "/coi/calofinnovation.jpg" //accessing file saved in public folder....
                   alt="Innovation Illustration"
                   width={500}
                   height={400}
@@ -571,7 +571,7 @@ export function HackathonLandingPage() {
                   onMouseLeave={(e) => applyBoxShadow(e, boxShadowStyles.default)}
                 >
                   <img
-                    src={`/src/assets/coi/${index + 1}.jpg`}
+                    src={`/coi/${index + 1}.jpg`}
                     alt={`Event photo ${index + 1}`}
                     className="h-[300px] w-full object-cover transition-transform duration-300"
                   />
@@ -603,7 +603,7 @@ export function HackathonLandingPage() {
                     <div key={idx} className="mb-4">
                       <img
                         onClick={() => setSelectedImage(`/src/assets/coi/${idx + 1}.jpg`)}
-                        src={`/src/assets/coi/gallery/${idx + 1}.jpg`} // Directly use idx + 1 for 1-20
+                        src={`/coi/gallery/${idx + 1}.jpg`} // Directly use idx + 1 for 1-20 from public folder ie public/coi/gallery
                         alt={`Gallery ${idx + 1}`}
                         width={400}
                         height={300}
