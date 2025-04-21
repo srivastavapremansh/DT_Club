@@ -575,7 +575,7 @@ export function HackathonLandingPage() {
                   onMouseLeave={(e) => applyBoxShadow(e, boxShadowStyles.default)}
                 >
                   <img
-                    src={`/src/assets/coi/${index + 1}.jpg`}
+                    src={`/coi/${index + 1}.jpg`}
                     alt={`Event photo ${index + 1}`}
                      className="w-full h-64 object-cover rounded-xl"
                   />
