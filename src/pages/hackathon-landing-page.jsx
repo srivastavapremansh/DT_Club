@@ -521,7 +521,7 @@ export function HackathonLandingPage() {
                   </Link>
                 </div>
                 <video
-                  src="/src/assets/coi/eventhighlight.mp4"
+                  src="/coi/eventhighlight.mp4"
                   className="h-full w-full object-cover rounded-xl"
                   controls
                   autoPlay
@@ -565,16 +565,21 @@ export function HackathonLandingPage() {
               {Array.from({ length: 8 }).map((_, index) => (
                 <div
                   key={index}
-                  className="rounded-xl overflow-hidden"
+                  className="p-2" // add spacing between slides
+                >
+                <div
+                  key={index}
+                  className="rounded-xl overflow-hidden hover:scale-105 transition-transform"
                   style={{ boxShadow: boxShadowStyles.default, transition: transitionStyle.boxShadow }}
                   onMouseEnter={(e) => applyBoxShadow(e, boxShadowStyles.hover)}
                   onMouseLeave={(e) => applyBoxShadow(e, boxShadowStyles.default)}
                 >
                   <img
-                    src={`/coi/${index + 1}.jpg`}
+                    src={`/src/assets/coi/${index + 1}.jpg`}
                     alt={`Event photo ${index + 1}`}
-                    className="h-[300px] w-full object-cover transition-transform duration-300"
+                     className="w-full h-64 object-cover rounded-xl"
                   />
+                </div>
                 </div>
               ))}
             </Slider>
