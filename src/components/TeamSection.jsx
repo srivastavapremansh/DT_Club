@@ -11,25 +11,26 @@ export function TeamSection({ members = teamMembers, layout = 'grid' }) {
     activeCategory === 'all' || member.category === activeCategory
   );
 
+  const totalSlides = filteredMembers.length; // One slide per member
+  const visibleCards = 4; // Show 4 cards at a time on desktop
+
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex + 1 >= Math.ceil(filteredMembers.length / cardsPerSlide) ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
+    console.log('Next slide, currentIndex:', currentIndex, 'totalSlides:', totalSlides, 'filteredMembers.length:', filteredMembers.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex - 1 < 0 ? Math.ceil(filteredMembers.length / cardsPerSlide) - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
+    console.log('Prev slide, currentIndex:', currentIndex, 'totalSlides:', totalSlides, 'filteredMembers.length:', filteredMembers.length);
   };
 
   // Adjust cardsPerSlide based on screen size
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setCardsPerSlide(1); // One card on mobile (≤ 768px)
+        setCardsPerSlide(1); // 1 card on mobile
       } else {
-        setCardsPerSlide(3); // Three cards on desktop (> 768px)
+        setCardsPerSlide(visibleCards); // 4 cards visible on desktop
       }
     };
     handleResize(); // Set initial value
@@ -91,10 +92,10 @@ export function TeamSection({ members = teamMembers, layout = 'grid' }) {
                 <ChevronLeft size={24} />
               </button>
               
-              <div className="w-full overflow-hidden">
-                <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / cardsPerSlide)}%)` }}>
+              <div className="w-full max-w-6xl mx-auto overflow-hidden">
+                <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / visibleCards)}%)` }}>
                   {filteredMembers.map((member, index) => (
-                    <div key={index} className={`${cardsPerSlide === 1 ? 'w-full' : 'w-1/4'} flex-shrink-0 px-2`}>
+                    <div key={index} className="w-[25%] flex-shrink-0 px-0">
                       <div className="group relative rounded-lg border bg-white shadow-md w-full h-[500px] mx-auto overflow-hidden transition-all duration-300 hover:shadow-xl">
                         <div className="relative w-full h-full">
                           <div className="w-full h-[70%] flex items-center justify-center p-2 bg-gray-100">
@@ -135,12 +136,12 @@ export function TeamSection({ members = teamMembers, layout = 'grid' }) {
             </div>
 
             <div className="flex justify-center mt-4 space-x-2">
-              {Array.from({ length: Math.ceil(filteredMembers.length / cardsPerSlide) }).map((_, index) => (
+              {Array.from({ length: filteredMembers.length }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${currentIndex === index ? 'bg-red-600' : 'bg-gray-300'}`}
-                  aria-label={`Go to slide ${index + 1}`}   
+                  className={`w-3 h-3 rounded-full transition-colors ${index >= currentIndex && index < currentIndex + visibleCards ? 'bg-red-600' : 'bg-gray-300'}`}
+                  aria-label={`Go to card ${index + 1}`}   
                 />
               ))}
             </div>
