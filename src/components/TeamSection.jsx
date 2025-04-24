@@ -6,13 +6,13 @@ export function TeamSection({ members = teamMembers, layout = 'grid' }) {
   const [activeCategory, setActiveCategory] = useState('all');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerSlide, setCardsPerSlide] = useState(3);
+  const [visibleCards, setVisibleCards] = useState(4); // Dynamic based on screen size
 
   const filteredMembers = members.filter(member => 
     activeCategory === 'all' || member.category === activeCategory
   );
 
   const totalSlides = filteredMembers.length; // One slide per member
-  const visibleCards = 4; // Show 4 cards at a time on desktop
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
@@ -24,13 +24,15 @@ export function TeamSection({ members = teamMembers, layout = 'grid' }) {
     console.log('Prev slide, currentIndex:', currentIndex, 'totalSlides:', totalSlides, 'filteredMembers.length:', filteredMembers.length);
   };
 
-  // Adjust cardsPerSlide based on screen size
+  // Adjust cardsPerSlide and visibleCards based on screen size
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
         setCardsPerSlide(1); // 1 card on mobile
+        setVisibleCards(1);  // Show 1 card at a time on mobile
       } else {
-        setCardsPerSlide(visibleCards); // 4 cards visible on desktop
+        setCardsPerSlide(4); // 4 cards on desktop
+        setVisibleCards(4);  // Show 4 cards at a time on desktop
       }
     };
     handleResize(); // Set initial value
@@ -95,7 +97,7 @@ export function TeamSection({ members = teamMembers, layout = 'grid' }) {
               <div className="w-full max-w-6xl mx-auto overflow-hidden">
                 <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / visibleCards)}%)` }}>
                   {filteredMembers.map((member, index) => (
-                    <div key={index} className="w-[25%] flex-shrink-0 px-0">
+                    <div key={index} className={`flex-shrink-0 px-0 ${visibleCards === 1 ? 'w-full' : 'w-[25%]'}`}>
                       <div className="group relative rounded-lg border bg-white shadow-md w-full h-[500px] mx-auto overflow-hidden transition-all duration-300 hover:shadow-xl">
                         <div className="relative w-full h-full">
                           <div className="w-full h-[70%] flex items-center justify-center p-2 bg-gray-100">
